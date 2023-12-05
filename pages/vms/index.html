@@ -1,0 +1,1291 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://kvjolly.github.io/pages/vms/">
+      
+      
+        <link rel="prev" href="../..">
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.14">
+    
+    
+      
+        <title>Virtual Machines - Keven's Place</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.fad675c6.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#introduction" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Keven&#39;s Place" class="md-header__button md-logo" aria-label="Keven's Place" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Keven's Place
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Virtual Machines
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Keven&#39;s Place" class="md-nav__button md-logo" aria-label="Keven's Place" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Keven's Place
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Virtual Machines
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Virtual Machines
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introduction
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-prep" class="md-nav__link">
+    <span class="md-ellipsis">
+      1 - Prep
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      2 - Setup
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2 - Setup">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-creating-the-machine" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1 - Creating the Machine
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-installing-debian" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2 - Installing Debian
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-first-boot" class="md-nav__link">
+    <span class="md-ellipsis">
+      3 - First Boot
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3 - First Boot">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-virtual-manager-interface" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1 - Virtual Manager Interface
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-configuring-the-vm" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2 - Configuring the VM
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.2 - Configuring the VM">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#321-modifying-and-adding-users" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2.1 - Modifying and adding Users
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#322-ssh-and-serial-port" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2.2 - SSH and Serial Port
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.2.2 - SSH and Serial Port">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ssh" class="md-nav__link">
+    <span class="md-ellipsis">
+      SSH
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#serial-port-console" class="md-nav__link">
+    <span class="md-ellipsis">
+      Serial Port console
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#323-installing-xfce-desktop" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2.3 - Installing XFCE Desktop
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#324-apache2-web-server" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2.4 - Apache2 Web Server
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-logical-volume-manager" class="md-nav__link">
+    <span class="md-ellipsis">
+      4 - Logical Volume Manager
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4 - Logical Volume Manager">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-adding-physical-volumes" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1 - Adding "Physical" Volumes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-volume-groups-and-logical-volumes" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2 - Volume Groups and Logical Volumes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-mounting-the-volumes" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.3 - Mounting the Volumes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#44-editing-fstab" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.4 - Editing fstab
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introduction
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-prep" class="md-nav__link">
+    <span class="md-ellipsis">
+      1 - Prep
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      2 - Setup
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2 - Setup">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-creating-the-machine" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1 - Creating the Machine
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-installing-debian" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2 - Installing Debian
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-first-boot" class="md-nav__link">
+    <span class="md-ellipsis">
+      3 - First Boot
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3 - First Boot">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-virtual-manager-interface" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1 - Virtual Manager Interface
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-configuring-the-vm" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2 - Configuring the VM
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.2 - Configuring the VM">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#321-modifying-and-adding-users" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2.1 - Modifying and adding Users
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#322-ssh-and-serial-port" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2.2 - SSH and Serial Port
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.2.2 - SSH and Serial Port">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ssh" class="md-nav__link">
+    <span class="md-ellipsis">
+      SSH
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#serial-port-console" class="md-nav__link">
+    <span class="md-ellipsis">
+      Serial Port console
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#323-installing-xfce-desktop" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2.3 - Installing XFCE Desktop
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#324-apache2-web-server" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2.4 - Apache2 Web Server
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-logical-volume-manager" class="md-nav__link">
+    <span class="md-ellipsis">
+      4 - Logical Volume Manager
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4 - Logical Volume Manager">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-adding-physical-volumes" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1 - Adding "Physical" Volumes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-volume-groups-and-logical-volumes" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2 - Volume Groups and Logical Volumes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-mounting-the-volumes" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.3 - Mounting the Volumes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#44-editing-fstab" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.4 - Editing fstab
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  <h1>Virtual Machines</h1>
+
+<p>Written by Keven Jolly</p>
+<h3 id="introduction">Introduction</h3>
+<p>Welcome to my guide on creating and using virtual machines! If these steps are followed through, you should have a working Debian desktop that can be accessed within your own computer.</p>
+<p>There are a few tidbits to keep in mind while following this guide:</p>
+<ul>
+<li>All steps are performed on a fresh installation of Debian 12.2.</li>
+<li>I will be using KVM to run my VM.</li>
+</ul>
+<h3 id="1-prep">1 - Prep</h3>
+<p>Before we begin creating a virtual machine, there are some steps we need to perform:</p>
+<ul>
+<li>Install Virtual Manager</li>
+<li>Download the disk image of our OS</li>
+</ul>
+<p>On any Linux system, you can use your package manager of choice to install Virtual Manager. On Debian and its derivatives, this is accomplished with the <code>apt</code> package manager:</p>
+<pre><code>sudo apt install virt-manager
+</code></pre>
+<p>While we <em>could</em> manage our virtual machine exclusively from the command line, using a GUI interface such as Virtual Manager will save us a lot of time.</p>
+<p>Now, let's download the disk image. 
+For Debian, the download is directly on the official website, <a href="https://www.debian.org/">debian.org</a>.</p>
+<h3 id="2-setup">2 - Setup</h3>
+<h4 id="21-creating-the-machine">2.1 - Creating the Machine</h4>
+<p>Let's start Virtual Manager (enter <code>virt-manager</code> in the command line) and see what we can do:</p>
+<p><img alt="Virtual Manager's initial interface" src="../img/virt-manager-display.png" title="Virtual Manager" /></p>
+<p>To begin creating our new virtual machine, click on either <code>File &gt; New Virtual Machine</code>, or click the icon at the top left.</p>
+<p><img alt="New VM Button" src="../img/virt-manager-new-vm-button.png" title="New VM Button" /></p>
+<p>We are met with the New VM dialogue, and asked how to install the Operating System.</p>
+<p>Since we have already downloaded the disk image, we will select the option labeled <code>Local install media (ISO image or CDROM)</code>. Continue by pressing the button labeled <code>Forward</code></p>
+<p><img alt="New VM dialogue" src="../img/virt-manager-new-vm.png" title="New VM dialogue" /></p>
+<p>Next, we are asked to select the installation media. CLicking <code>Browse...</code> followed by <code>Browse Local</code>, we can find the ISO in our downloads folder using a traditional File Manager dialogue.</p>
+<p><img alt="Selecting the Installation Media" src="../img/virt-manager-select-install-media.png" title="Selecting the Installation Media" /></p>
+<p>Once the Installation media is selected, you may continue forward.</p>
+<p>However, it is possible that Virtual Manager does not detect the operating system properly. In that case, uncheck the box at the bottom and search for your chosen operating system, or the closest version to it.</p>
+<p><img alt="Selecting the OS" src="../img/virt-manager-select-os.png" title="Selecting the OS" /></p>
+<p>Now, we need to specify the resources to be allocated to the Virtual Machine. You <em>could</em> allow it access to your full system resources, but you are likely to run into performance issues, especially if you install multiple VM's</p>
+<p>For a typical computer, I would choose about one quarter or one third of the available resources.</p>
+<p><img alt="Allocating Resources" src="../img/virt-manager-select-resources.png" title="Allocating Resources" /></p>
+<p>Our next step is to create the storage device for this Virtual Machine. The default size of 20.0 GiB will suffice, although you may want to configure this if your host machine has a low amount of space available.</p>
+<p><img alt="Creating Storage" src="../img/virt-manager-creating-storage.png" title="Creating Storage" /></p>
+<p>Finally, we are asked to set the name of the Virtual Machine and to review details about the installation. This name can be anything you want, but for this guide I have chosen to name it after the Operating System.</p>
+<p><img alt="Reviewing the Installation" src="../img/virt-manager-review-installation.png" title="Reviewing the Installation" /></p>
+<p>Now click finish, and wait for the virtual machine to boot for the first time.</p>
+<h4 id="22-installing-debian">2.2 - Installing Debian</h4>
+<p>Once the virtual machine has booted, you will be greeted with a new window.</p>
+<p><img alt="The Virtual Machine interface" src="../img/virt-machine-first-boot.png" title="The Virtual Machine interface after booting for the first time" /></p>
+<p>We'll explore this window more in depth later on. For now, we need to finish the installation process.</p>
+<p>If you have chosen to use Debian 12 for your Operating System, then the next set of steps should apply to you.<br />
+If you chose something else, your steps may vary.</p>
+<p>To start, we'll select the <code>Graphical Install</code> option</p>
+<blockquote>
+<p>Note: When interacting with the Virtual Machine at this point, your mouse and keyboard may become locked in the window. Pressing Ctrl and Alt at the same time will release control back to the Host system.</p>
+</blockquote>
+<p>We will now be asked to complete a number of steps. Keep in mind that many of them can be changed later.</p>
+<ol>
+<li>
+<p>Language</p>
+<ul>
+<li>
+<p>The OS's default literary language</p>
+</li>
+<li>
+<p>My Entry: English</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Location</p>
+<ul>
+<li>Approximate location of your machine</li>
+</ul>
+</li>
+<li>
+<p>Keymap</p>
+<ul>
+<li>The layout for your keyboard</li>
+</ul>
+</li>
+<li>
+<p>Hostname</p>
+<ul>
+<li>The name your system uses for networking to other machines.
+      If you are making multiple VM's, this should ideally be unique to each one.
+      But if you are only making one, call it whatever you like.</li>
+</ul>
+</li>
+<li>
+<p>Domain Name</p>
+<ul>
+<li>The domain name that will lead back to this Virtual Machine.<br />
+  If you don't plan to using a domain name or to network your VM publicly,<br />
+  you can skip this step.</li>
+</ul>
+</li>
+<li>
+<p>Configure Users</p>
+<p>In this step, we will be configuring both the Root User and any additional users.</p>
+<ul>
+<li>
+<p>Root Password</p>
+<ul>
+<li>The password for the root user 
+  Make sure this is something strong, <strong>especially</strong> if you plan to use your VM as a public server!</li>
+</ul>
+</li>
+<li>
+<p>User Full Name</p>
+<ul>
+<li>Your full First and Last Name, or something else entirely.<br />
+  This will be used for a non-root user.</li>
+<li>This may be different from the account username.</li>
+</ul>
+</li>
+<li>
+<p>Username</p>
+<ul>
+<li>The <em>actual</em> username that your user account will use.<br />
+  Any commands that modify users will use whatever you enter here</li>
+</ul>
+</li>
+<li>
+<p>User Password</p>
+<ul>
+<li>The password for the default user
+  If you plan on making this VM public, and this user a sudoer, make this a strong password. Otherwise, I'd suggest something easy to remember.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Clock</p>
+<ul>
+<li>Your preference of timezone for the system time.</li>
+</ul>
+</li>
+<li>
+<p>Disk Partitions</p>
+<p>We will configure everything about how our Virtual Machine installs onto the disk in this step.</p>
+<ul>
+<li>
+<p>Partitioning Method</p>
+<ul>
+<li>
+<p>Normally, if your disk already had partitions, there would be multiple options available for configuring the installation to work around the existing partitions. However, since we made a new virtual disk for this VM, we don't need those options.</p>
+</li>
+<li>
+<p>For Virtual Machines, I suggest selecting the option: <code>Guided - use entire disk and set up LVM</code></p>
+</li>
+</ul>
+</li>
+<li>
+<p>Partition Disks</p>
+<ul>
+<li>There's only one option available, so just hit continue.</li>
+</ul>
+</li>
+<li>
+<p>Partitioning Scheme</p>
+<ul>
+<li>Selects how the System Files should be partitioned.
+  If you're not sure, just use <code>All files in one partition</code></li>
+</ul>
+</li>
+<li>
+<p>Confirm</p>
+<ul>
+<li>You'll be asked to confirm the changes. Select yes and continue.</li>
+</ul>
+</li>
+<li>
+<p>Volume Group Portion</p>
+<ul>
+<li>If you chose to use LVM, you'll be asked how much of the volume to use by default, since it is possible to expand it later. For now, there's no reason to decrease this size, so we can leave this option alone and continue.</li>
+</ul>
+</li>
+<li>
+<p>Confirm (again)</p>
+<ul>
+<li>Again, select yes and continue</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Scan Extra Media</p>
+<ul>
+<li>You'll be asked if you want to scan more media. We only needed our Installation ISO, so we can continue without scanning anything more.</li>
+</ul>
+</li>
+<li>
+<p>Configuring the Package Manager</p>
+<p>Now we need to configure the Package Manager</p>
+<ul>
+<li>
+<p>Package Manager Mirror</p>
+<ul>
+<li>Where the Package Manager will try to download packages from. The default option should be best.</li>
+</ul>
+</li>
+<li>
+<p>Debian Archive Mirror</p>
+<ul>
+<li>Again, the default option should work best</li>
+</ul>
+</li>
+<li>
+<p>HTTP Proxy</p>
+<ul>
+<li>If you have a proxy, you can configure it here. If you don't, just press continue.</li>
+</ul>
+</li>
+<li>
+<p>Popularity Contest</p>
+<ul>
+<li>Whether statistics about the packages you install or use should be collected. This defaults to no, so it's fine to just hit continue.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Select and Install Software</p>
+<p>What should be installed by default onto the Virtual Machine. You can choose from a number of Desktop environments, and you can choose to install an SSH and/or a Web server.</p>
+<ul>
+<li>
+<p>8 Desktop Environments are listed</p>
+<ul>
+<li>
+<p>GNOME is one of the most popular DE's, and is the default selection
+  May be difficult to get used to for Windows users</p>
+</li>
+<li>
+<p>KDE Plasma is highly customizable and stands as a very powerful DE
+  Great for a standalone system, but a little too heavy for a Virtual Machine</p>
+</li>
+<li>
+<p>LXDE is extremely lightweight, but has similarly light features
+  Good if you want a GUI with the absolute minimum resource usage</p>
+</li>
+<li>
+<p>XFCE is very well balanced in terms of weight and usability
+  Great choice for a single Virtual Machine.</p>
+</li>
+<li>
+<p>For now, we will be skipping a DE, as we can simply use the Command Line for setup. Later, we will install XFCE.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Enabling Web server will install an Apache HTTP server to be run by the Virtual Machine. Select this if you plan to host a website on your VM.</p>
+</li>
+<li>
+<p>Enabling SSH server will allow connecting to the VM remotely via the command line of another device. Further steps can be taken to improve the security.</p>
+</li>
+<li>
+<p>There is no reason to disable Standard System Utilities</p>
+</li>
+</ul>
+<p>With that, here is the selection I am using:</p>
+<p><img alt="No DE is selected. Web Server, SSH Server, and standard system utilities are selected." src="../img/virt-machine-debian-software-selection.png" title="Software Selection" /></p>
+</li>
+<li>
+<p>Grub Boot Loader</p>
+<p>You'll be asked if you want to install GRUB boot loader to the primary drive. Since there's no other OS's on the system, it is safe to do so.</p>
+<ul>
+<li>When prompted for a device, select the option listed as <code>/dev/vda</code> or similar.</li>
+</ul>
+</li>
+</ol>
+<p>Once the Grub Boot loader is configured and installed, the installation is complete. You can now load into your Virtual Machine.</p>
+<h2 id="3-first-boot">3 - First Boot</h2>
+<blockquote>
+<p>Note: From here, the order in which you follow the steps may vary. Feel free to jump around and play around with your virtual machine!</p>
+</blockquote>
+<h3 id="31-virtual-manager-interface">3.1 - Virtual Manager Interface</h3>
+<p>Before continuing forward, let's talk about the interface.<br />
+There are plenty of tools to use here, and you may want to take some time to browse around and familiarize yourself with them.</p>
+<p><img alt="The Virtual Machine Interface" src="../img/virt-machine-interface.png" title="The Virtual Machine Interface" /></p>
+<p>From left-to-right, the icons are as follows:</p>
+<ul>
+<li>
+<p>First Section</p>
+<ul>
+<li>
+<p>Switch the view to show the display output of the Virtual Machine</p>
+</li>
+<li>
+<p>Swith the view to the Details panel. <em>You'll want to remember this panel for later!</em></p>
+</li>
+</ul>
+</li>
+<li>
+<p>Second Section</p>
+<ul>
+<li>
+<p>Resume a Paused Virtual Machine</p>
+</li>
+<li>
+<p>Pause the Virtual Machine. This will halt all activities until the machine is unpaused.</p>
+<ul>
+<li>This can free up the CPU safely if the Virtual Machine is busy</li>
+</ul>
+</li>
+<li>
+<p>Shutdown Options</p>
+<ul>
+<li>
+<p><code>Reboot</code> and <code>Shut Down</code> will send the appropriate signal to the Machine. This is similar to pressing shutdown or restart on your device</p>
+</li>
+<li>
+<p><code>Force Reboot</code> and <code>`Force Off</code> will immediately shut down the system. This is akin to pulling the power cable, or holding the power button on a device for some time.</p>
+</li>
+<li>
+<p><code>Save</code> will save the current state of the system's RAM to be loaded later. If you need to restart the Host, but the VM is busy, this is a viable option.</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Third Section</p>
+<ul>
+<li>
+<p>Snapshots</p>
+<ul>
+<li>Snapshots save the <em>entire</em> state of the System for later restoration. If you need to make potentially destructive changes, visit the Snapshots menu and save the system in case something breaks.</li>
+</ul>
+</li>
+<li>
+<p>Fullscreen</p>
+<ul>
+<li>Fullscreens the VM display.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="32-configuring-the-vm">3.2 - Configuring the VM</h3>
+<h4 id="321-modifying-and-adding-users">3.2.1 - Modifying and adding Users</h4>
+<p>To begin, let's install <code>sudo</code> and allow our default user to use it, so that we do not need to log into root to perform certain actions. We can use <code>apt</code> to install the package, and use <code>usermod</code> to add the user to the <code>sudo</code> group.</p>
+<p><img alt="Logging in as Root, and using the command &quot;usermod -aG sudo jolly&quot;" src="../img/virt-machine-usermod.png" title="usermod -aG sudo &lt;username&gt;" /></p>
+<pre><code>usermod -aG sudo jolly
+apt install sudo
+</code></pre>
+<p>Now, we can log into our default user and verify that we can use <code>sudo</code>.</p>
+<p><img alt="sudo echo &quot;I can use sudo now!&quot;" src="../img/virt-machine-sudo-works.png" title="Sudo is verified to be usable" /></p>
+<p>We can also add a few users and make them able to use sudo as well.</p>
+<p><img alt="User kjolly is added" src="../img/virt-machine-add-user.png" title="User kjolly was added" /></p>
+<pre><code>sudo adduser -c &quot;Keven Jolly&quot; kjolly
+sudo usermod -G sudo kjolly
+grep &quot;kjolly&quot; /etc/passwd
+grep &quot;kjolly&quot; /etc/group
+</code></pre>
+<h4 id="322-ssh-and-serial-port">3.2.2 - SSH and Serial Port</h4>
+<p>If you'd rather not need to use the Virtual Machine interface to interact with the machine, there a few ways to do so.</p>
+<h5 id="ssh">SSH</h5>
+<p>If you did not already install SSH during the OS installation, you can do so by installing the <code>openssh-server</code> package.</p>
+<p>Then, you can use <code>systemctl</code> to activate the SSH system service.</p>
+<p><img alt="Enabling the SSH Service" src="../img/virt-machine-enable-ssh.png" title="sudo systemctl enable ssh" /></p>
+<pre><code>sudo systemctl enable ssh
+</code></pre>
+<p>Now, we can (sort-of) remotely connect to this Virtual Machine by using the <code>ssh</code> command:</p>
+<pre><code>ssh &lt;username&gt;@&lt;ip&gt;
+</code></pre>
+<ul>
+<li><code>&lt;username&gt;</code> is the name of the user that you are attempting to log in as.</li>
+<li><code>&lt;ip&gt;</code> is the ip address or the domain name of the machine you are attempting to connect to.</li>
+</ul>
+<h5 id="serial-port-console">Serial Port console</h5>
+<p><code>virsh</code> is a <strong><em>very</em></strong> powerful package for managing Virtual Machines from the command line. If you do not have it installed on the host, I reccomend that you install it.  </p>
+<p>You can use Virsh to access the console of your VM without using the interface. To do this, you need to enable command line access from the VM's serial port.<br />
+This can be done with the following command:<br />
+<code>sudo systemctl enable serial-getty@ttyS0.service</code></p>
+<p>Once done, you can use Virsh to access your VM from the command line of the Host system.</p>
+<p><img alt="Accessing the Virtual Machine from Virsh" src="../img/virt-machine-access-from-virsh.png" title="sudo virsh console &lt;vm name&gt;" /></p>
+<pre><code>sudo virsh console debian12
+</code></pre>
+<blockquote>
+<p>Note: Remember to use <code>Ctrl + ]</code> to exit the console at any time.</p>
+</blockquote>
+<p>You can also verify that the serial port is working by switching the console to the Serial console in Virtual Manager</p>
+<p><img alt="Accessing the Serial Console in Virtual Manager" src="../img/virt-machine-serial-console.png" title="View &gt; Consoles &gt; Serial 1" /></p>
+<h4 id="323-installing-xfce-desktop">3.2.3 - Installing XFCE Desktop</h4>
+<p>If you skipped installing a Desktop Environment during the OS installation, you might want to try installing one at this point. Doing so is very easy - we just need to know the package to install.</p>
+<p>For XFCE on Debian distributions, the package to install is <code>xfce4</code>.</p>
+<p><img alt="sudo apt install xfce4" src="../img/virt-machine-install-xfce.png" title="Easy as that" /></p>
+<blockquote>
+<p>Note: This installation is quite heavy. You may want to skip ahead to LVM if you need to increase your storage space.</p>
+</blockquote>
+<p>After this, you'll want to set the default target to <code>graphical.target</code> using <code>systemctl</code>:</p>
+<p><img alt="sudo systemctl set-default graphical.target" src="../img/virt-machine-setdefault-graphical.png" title="Graphical is now the default" /></p>
+<p>Now reboot the system, and you should be met with a new login screen.</p>
+<p><img alt="XFCE Login" src="../img/virt-machine-xfce-login.png" title="XFCE Login" /></p>
+<p>If you want to return to a command line only environmnt, you can use <code>systemctl</code> again to set the default target back to <code>multi-user.target</code>.</p>
+<p><img alt="XFCE Terminal &gt; &quot;sudo systemctl set-default multi-user.target&quot;" src="../img/virt-machine-setdefault-multiuser.png" title="Multi-User is now the default" /></p>
+<h4 id="324-apache2-web-server">3.2.4 - Apache2 Web Server</h4>
+<p>If you did not choose to install a web server during the OS setup, you can do so by installing the <code>apache2</code> package with <code>apt</code>.</p>
+<p>Now, if you type your Virtual Machine's IP address into a web browser on the host machine, you'll be met with the Apache2 default page.</p>
+<p><img alt="Apache2 is loaded" src="../img/virt-machine-apache2-default.png" title="Apache2 is running" /></p>
+<p>This page's source is located at <code>/var/www/html/index.html</code> within the Virtual Machine, so you may configure it how you please!</p>
+<p><img alt="Apache2 Default Page modified" src="../img/virt-machine-apache2-notdefault.png" title="The page has been modified" /></p>
+<p>If you want to open access to this page, you'll want to look into a <strong>bridge network</strong>.</p>
+<h2 id="4-logical-volume-manager">4 - Logical Volume Manager</h2>
+<p>With Logical Volume Manager, it is possible to append additional storage space to the Virtual Machine without shutting it down. That way, if you need extra storage space, there will be minimal downtime required.</p>
+<blockquote>
+<p>Note: We are going to use some potentially dangerous commands. Now would be a good time to make a snapshot!</p>
+</blockquote>
+<p>There are a few terms that you should know going forward:</p>
+<table>
+<thead>
+<tr>
+<th>Physical Volumes (PV)</th>
+<th>Volume Groups (VG)</th>
+<th>Logical Volumes (LV)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Physical drives installed into the machine</td>
+<td>A modifiable group of Physical Volumes</td>
+<td>A partition of a Volume Group that acts as a single volume</td>
+</tr>
+</tbody>
+</table>
+<p>A Physical Volume is loaded onto the device, a Volume Group gathers multiple physical volumes together, and a Logical Volume is a single volume carved from one volume group.</p>
+<h3 id="41-adding-physical-volumes">4.1 - Adding "Physical" Volumes</h3>
+<p>To add physical volumes to the virtual machine, we'll want to use Virtual Manager.<br />
+Navigate the Details panel and select <code>Add Hardware</code></p>
+<p><img alt="Add Hardware" src="../img/virt-manager-add-hardware.png" title="Adding Virtual Hardware" /></p>
+<p>In the new dialogue, we can select to add a Storage device on the left panel. Then, select the amount of space that you would like to append to the virtual machine.</p>
+<p><img alt="Configuring New Storage Device" src="../img/virt-manager-add-storage.png" title="Adding Physical Storage" /></p>
+<p>For this guide, I will add two storage devices: one with 15 GiB, the other with 25 GiB.</p>
+<p>In the Details panel, you should now see more VirtIO Disk items, depending on how many devices you added.</p>
+<p>The machine now has physical storage added, but it has not been configured to recognize it.</p>
+<p>We'll want to use <code>fdisk</code> to fix this.</p>
+<p>Start by entering <code>fdisk -l</code> to view all attached volumes. You should spot the volume(s) that you added to the machine. Take note of the device's path.</p>
+<p><img alt="/dev/vdb and /dev/vdc are listed" src="../img/virt-machine-fdisk-l.png" title="'/dev/vdb' and '/dev/vdc' are the paths to my added storage devices." /></p>
+<pre><code>sudo fdisk -l
+</code></pre>
+<p>Now, enter <code>fdisk &lt;path&gt;</code> to start configuring your device.</p>
+<p>You will find yourself in a console specific to fdisk.</p>
+<p><img alt="In the FDisk console" src="../img/virt-machine-fdisk-console.png" title="In the fdisk console" /></p>
+<pre><code>sudo fdisk /dev/vdb
+</code></pre>
+<p>From here, there several commands at your disposal. Those of interest are:</p>
+<ul>
+<li><code>p</code> - Lists information about the volume</li>
+<li><code>n</code> - Create a partition on the volume</li>
+<li><code>t</code> - Sets the Disk Type</li>
+<li><code>w</code> - Writes the changes to Disk</li>
+<li><code>q</code> - Exits fdisk</li>
+</ul>
+<p>Messing with fdisk too much may cause issues, so follow these next steps closely:</p>
+<ol>
+<li>Create a new partition (<code>n</code>). For best case, use all of the default values.</li>
+<li>Set the disk type to Linux LVM (<code>t</code>). The code we want to enter for this is 8E (Use <code>l</code> to list all codes available).
+   <img alt="Linux LVM is code 8E" src="../img/virt-machine-partition-types.png" title="Linux LVM = 8E" /></li>
+<li>Write the changes to disk (<code>w</code>) and exit (<code>q</code>).</li>
+<li>Repeat for each disk that you added.</li>
+</ol>
+<p>Once those steps have been performed, use <code>fdisk -l</code> again to view the new partitions.</p>
+<p><img alt="The disks now have the partitions &quot;/dev/vdb1&quot; and &quot;/dev/vdc1&quot;" src="../img/virt-machine-partitioned-disks.png" title="The partition are '/dev/vdb1' and '/dev/vdc1'" /></p>
+<p>We have partitioned disks, but using <code>pvs</code> still shows no physical volumes.</p>
+<p>We can create physical volumes from the partitioned disks by running <code>pvcreate</code>:</p>
+<p><img alt="sudo pvcreate /dev/vda1; pvcreate /dev/vda2" src="../img/virt-machine-pvs-created.png" title="The Physical Volumes have been created successfully" /></p>
+<pre><code>pvcreate /dev/vdb1 /dev/vdb2
+</code></pre>
+<h3 id="42-volume-groups-and-logical-volumes">4.2 - Volume Groups and Logical Volumes</h3>
+<p>The physical volumes have now been added to our Virtual Machine, but we can't access it just yet. To do so, we'll need to add the volumes to a Volume Group, and then create some Logical Volumes out of that group.</p>
+<p>We'll define a new Volume Group with <code>vgcreate</code>.</p>
+<p><img alt="sudo vgcreate &lt;name&gt; &lt;volume-path...&gt;" src="../img/virt-machine-new-vg.png" title="sudo vgcreate data /dev/vdb1 /dev/vdb2" /></p>
+<pre><code>sudo vgcreate data /dev/vdb1 /dev/vdb2
+</code></pre>
+<p>We can see that our Physical Volumes are now contained within a Volume Group. Now, we can add one or more Logical Volumes from this one group, using <code>lvcreate</code>.</p>
+<p><img alt="lvcreate -n &lt;name&gt; -L &lt;size&gt; &lt;pv&gt;" src="../img/virt-machine-new-lvs.png" title="Two LV's of 20g added" /></p>
+<pre><code>sudo lvcreate -n data01 -L 20.0g data
+sudo lvcreate -n data02 -L 19.9g data
+</code></pre>
+<h3 id="43-mounting-the-volumes">4.3 - Mounting the Volumes</h3>
+<p>We now have two Logical Volumes carved from a Volume Group that holds two Physical Volumes. The space is now recognized by the system, but there are a few more steps we need to complete before we can use the additional storage space.</p>
+<p>We need to find the path to our Logical Volumes to use them. We can use this by passing <code>lvdisplay</code> into <code>grep</code>.</p>
+<p><img alt="sudo lvdisplay | grep &quot;Path&quot;" src="../img/virt-machine-find-lvpaths.png" title="'/dev/data/data01' and '/dev/data/data02' are the paths I am looking for." /></p>
+<pre><code>sudo lvdisplay | grep &quot;Path&quot;
+</code></pre>
+<p>The first step to create a file system for each volume. We can use <code>mkfs.ext4</code> to make a filesystem using the <code>ext4</code> format.</p>
+<p><img alt="sudo mkfs.ext4 &lt;lv-path&gt;" src="../img/virt-machine-making-filesystems.png" title="'data01' and 'data02' now have ext4 filesystems" /></p>
+<pre><code>sudo mkfs.ext4 /dev/data/data01
+sudo mkfs.ext4 /dev/data/data02
+</code></pre>
+<p>Now that the volumes have file systems associated with them, we can mount them to the system with <code>mount</code>.</p>
+<p><img alt="" src="../img/virt-machine-mount-lvs.png" title="The volumes are now mounted at '/mnt/data01' and '/mnt/data02'" /></p>
+<pre><code>sudo mkdir /mnt/data01
+sudo mkdir /mnt/data02
+sudo mount /dev/data/data01 /mnt/data02
+sudo mount /dev/data/data02 /mnt/data02
+</code></pre>
+<p>We can check that the Filesystems are mounted by creating a file within the mounted directories.</p>
+<p><img alt="" src="../img/virt-machine-check-mount.png" title="'testfile' was successfully created" /></p>
+<pre><code>sudo touch testfile
+ls -l
+</code></pre>
+<p>The volume is mounted and usable, so it works! </p>
+<p>That is, until the next reboot...</p>
+<p><img alt="" src="../img/virt-machine-check-mount2.png" title="'testfile' is missing" /></p>
+<pre><code>cd /mnt/data01
+ls -l
+</code></pre>
+<h3 id="44-editing-fstab">4.4 - Editing fstab</h3>
+<p>Our testfile disappeared since, once we rebooted, the logical volume was not remounted.</p>
+<p>To fix this, we need to add some entries to <code>/etc/fstab</code>.</p>
+<blockquote>
+<p>Note: <code>fstab</code> is a dangerous file to edit. Make a snapshot before diving too deep!</p>
+</blockquote>
+<p><img alt="" src="../img/virt-machine-etc-fstab.png" title="/etc/fstab" /></p>
+<p>We'll need to add one line to this file for each logical volume we need to mount.</p>
+<p>These lines hold the path to the filesystem, the directory to mount the volume, the filesystem type along with a few more options.</p>
+<p><img alt="" src="../img/virt-machine-fstab-modified.png" title="/etc/fstab*" /></p>
+<pre><code>/dev/data/data01 /mnt/data01 ext4 defaults 0 0
+/dev/data/data02 /mnt/data02 ext4 defaults 0 0
+</code></pre>
+<p>Now we need to save the file. On our next reboot, we should have access to our filesystem once again.</p>
+<p><img alt="" src="../img/virt-machine-fstab-works.png" title="'testfile' is there once again!" /></p>
+<pre><code>ls -l /mnt/data01
+</code></pre>
+<p>Our Logical volumes are now mounted on startup, meaning we successfully added more storage to the virtual machine!</p>
+<p>Alternatively, we can add another layer of reinforcement by entering the device's UUID into fstab instead of the label.</p>
+<p>We can see the UUID of our Logical Volumes using <code>blkid</code>.</p>
+<p><img alt="" src="../img/virt-machine-lv-blkids.png" title="The UUIDS are displayed" /></p>
+<p>Then, we enter them in place of the respective label into <code>/etc/fstab</code></p>
+<p><img alt="" src="../img/virt-machine-fstab-blkids.png" title="The UUIDS are enterd int fstab" /></p>
+<p>Backup, save, and reboot. Our testfile should be found in <code>/mnt/data01</code> once again.</p>
+<p>To recap, the steps that we followd were:</p>
+<ul>
+<li>Add new Hard Disks through Virtual Manager</li>
+<li>Partition the disks using <code>fdisk</code></li>
+<li>Create Physical Volumes using <code>pvcreate</code></li>
+<li>Create a Volume Groups with <code>vgcreate</code></li>
+<li>Carve some Logical Volumes with <code>lvcreate</code></li>
+<li>Mount at runtime using <code>mount</code></li>
+<li>Enable mounting at boot by editing <code>/etc/fstab</code></li>
+</ul>
+<p>Keep in mind that all of these can be repeated without rebooting. Using LVM to add storage space to our Virtual Machine has a lot of steps, but it allows us to do so without causing any downtime (unless we need to restore a backup).</p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.cd18aaf1.min.js"></script>
+      
+    
+  </body>
+</html>
